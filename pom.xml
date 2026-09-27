@@ -28,7 +28,7 @@
     <parent>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>plugin</artifactId>
-      <version>6.2153.vcf31911d10c4</version>
+      <version>6.2236.v12dd4c483242</version>
       <relativePath />
     </parent>
     <groupId>org.jenkins-ci.plugins.workflow</groupId>
@@ -64,8 +64,9 @@
     <properties>
         <changelist>999999-SNAPSHOT</changelist>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
-        <jenkins.baseline>2.555</jenkins.baseline>
+        <jenkins.baseline>2.568</jenkins.baseline>
         <jenkins.version>2.569</jenkins.version>
+        <banObsoleteDependencyOverrides.skip>false</banObsoleteDependencyOverrides.skip>
         <no-test-jar>false</no-test-jar>
         <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
         <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
@@ -75,21 +76,9 @@
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-${jenkins.baseline}.x</artifactId>
-                <version>6585.va_085f4d47c41</version>
+                <version>7093.v37de7b_4a_8a_4f</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
-            <!-- TODO until in BOM -->
-            <dependency>
-                <groupId>org.jenkins-ci.plugins</groupId>
-                <artifactId>ssh-slaves</artifactId>
-                <version>3.1071.v0d059c7b_c555</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jenkins-ci.plugins</groupId>
-                <artifactId>ssh-slaves</artifactId>
-                <classifier>tests</classifier>
-                <version>3.1071.v0d059c7b_c555</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
